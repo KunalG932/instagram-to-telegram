@@ -28,7 +28,7 @@ instaClient = Client(user_name, password, cookie=instaCookie)
 api_id = config['TELEGRAM']['api_id']
 api_hash = config['TELEGRAM']['api_hash']
 target_group = config['TELEGRAM'].getint('telegram_destination_group_id')
-session_file = 'telegramBot'
+session_file = '6737395815:AAEuiDpU0QL0-1pG0R4B6XzmA_Fj5SSyeCU'
 
 
 # ##############################################< Proxy >##############################################
