@@ -55,11 +55,14 @@ except KeyError:
 
 
 if proxy_enabled:
-    # print(f'Using proxy server {proxy_server}:{proxy_port}')
+    proxy_server = config['PROXY']['server'].encode()  # Encoding string to bytes-like object
+    proxy_port = config['PROXY'].getint('port')
+    print(f'Using proxy server {proxy_server.decode()}:{proxy_port}')  # Decoding bytes-like object for printing
     telegramClient = TelegramClient(session_file, api_id, api_hash, proxy=(
         socks.SOCKS5, proxy_server, proxy_port))
 else:
     telegramClient = TelegramClient(session_file, api_id, api_hash)
+
 
 
 # telegramClient = TelegramClient(session_file, api_id, api_hash)
